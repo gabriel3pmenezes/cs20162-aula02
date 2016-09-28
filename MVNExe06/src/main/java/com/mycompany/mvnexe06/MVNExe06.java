@@ -12,14 +12,20 @@ public class MVNExe06 {
             throw new IllegalArgumentException("Número fora da faixa");
         }
         
-        int i = 2;
+        int i;
+        int cont = 0;
         
-        while(i <= (n - 1)){
+        for (i = 1;i <= n;i++ ){
             if(n % i == 0){
-                return false;
-            }       
+            cont = cont + 1;
+            }
         }
-        return true;
+        if (cont == 2){
+            return true;
+        }else{
+            return false;
+        }   
+        
     }
             
     public static void main(String[] args) {
@@ -44,3 +50,21 @@ public class MVNExe06 {
     
     
 }
+
+
+/*
+
+ if(n < 1){
+            throw new IllegalArgumentException("Número fora da faixa");
+        }
+        
+        int i = 2;
+        
+        while(i <= (n - 1)){
+            if(n % i == 0){
+                return true;
+            }       
+        }
+        return false;
+
+*/
