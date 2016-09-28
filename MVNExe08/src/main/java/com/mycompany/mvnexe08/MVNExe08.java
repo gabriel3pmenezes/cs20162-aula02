@@ -6,6 +6,14 @@ import java.util.Scanner;
 public class MVNExe08 {
 
     public static int CrivoEratostenes(int a, int b){
+       
+        if(a >= b){
+            throw new IllegalArgumentException("Número fora da faixa");
+        }
+        
+         if(b < 0){
+            throw new IllegalArgumentException("Número fora da faixa");
+        }
         
        int m;
        

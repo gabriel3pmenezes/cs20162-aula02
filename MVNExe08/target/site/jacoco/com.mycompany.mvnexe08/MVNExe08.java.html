@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MVNExe08.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MVNExe08</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.mvnexe08</a> &gt; <span class="el_source">MVNExe08.java</span></div><h1>MVNExe08.java</h1><pre class="source lang-java linenums">
+package com.mycompany.mvnexe08;
+
+import java.util.Scanner;
+
+<span class="nc" id="L6">public class MVNExe08 {</span>
+
+    public static int CrivoEratostenes(int a, int b){
+       
+<span class="fc bfc" id="L10" title="All 2 branches covered.">        if(a &gt;= b){</span>
+<span class="fc" id="L11">            throw new IllegalArgumentException(&quot;Número fora da faixa&quot;);</span>
+        }
+        
+<span class="pc bpc" id="L14" title="1 of 2 branches missed.">         if(b &lt; 0){</span>
+<span class="nc" id="L15">            throw new IllegalArgumentException(&quot;Número fora da faixa&quot;);</span>
+        }
+        
+       int m;
+       
+<span class="fc bfc" id="L20" title="All 2 branches covered.">       while(b != 0){</span>
+<span class="fc" id="L21">           m = a % b;</span>
+<span class="fc" id="L22">           a = b;</span>
+<span class="fc" id="L23">           b = m;</span>
+        }
+<span class="fc" id="L25">       return a;</span>
+    }
+    public static void main(String[] args) {
+       
+        int a;
+        int b;
+        int resultado;
+<span class="nc" id="L32">        Scanner leitor = new Scanner(System.in);</span>
+        
+<span class="nc" id="L34">        System.out.println(&quot;Insira o valor de a: &quot;);</span>
+<span class="nc" id="L35">        a = Integer.parseInt(leitor.nextLine());</span>
+        
+<span class="nc" id="L37">        System.out.println(&quot;Insira o valor de b: &quot;);</span>
+<span class="nc" id="L38">        b = Integer.parseInt(leitor.nextLine());</span>
+        
+<span class="nc" id="L40">        resultado = CrivoEratostenes(a, b);</span>
+        
+<span class="nc" id="L42">        System.out.println(&quot;O resultado é: &quot; + resultado);</span>
+<span class="nc" id="L43">    }</span>
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
