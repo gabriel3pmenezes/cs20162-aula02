@@ -8,6 +8,14 @@ public class MVNExe09 {
 
     public static int CrivoEratostenesSubtracoes(int a, int b){
         
+        if(a >= b){
+            throw new IllegalArgumentException("Número fora da faixa");
+        }
+        
+         if(b < 0){
+            throw new IllegalArgumentException("Número fora da faixa");
+        }
+        
         while(a != b){
             if (a > b){
                 a = a - b;

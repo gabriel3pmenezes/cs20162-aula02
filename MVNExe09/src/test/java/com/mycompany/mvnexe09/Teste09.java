@@ -8,12 +8,16 @@ public class Teste09 {
 
     @Test
     public void umNumeroArbitrarioCorreto() {
-        assertEquals(true, MVNExe09.CrivoEratostenesSubtracoes(10, 20));
+        assertEquals(1, MVNExe09.CrivoEratostenesSubtracoes(3, 4));
     }
 
-    @Test
-    public void umNumeroArbitrarioFalso() {
-        assertEquals(false, MVNExe09.CrivoEratostenesSubtracoes(-34, 25));
+    @Test(expected = IllegalArgumentException.class)
+    public void numMenorqueValido1() {
+        MVNExe09.CrivoEratostenesSubtracoes(3, -1);
     }
-
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void numMenorqueValido2() {
+        MVNExe09.CrivoEratostenesSubtracoes(3, -4);
+    }
 }
