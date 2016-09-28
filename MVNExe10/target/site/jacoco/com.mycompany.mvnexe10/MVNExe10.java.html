@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pt"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MVNExe10.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">MVNExe10</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.mvnexe10</a> &gt; <span class="el_source">MVNExe10.java</span></div><h1>MVNExe10.java</h1><pre class="source lang-java linenums">
+package com.mycompany.mvnexe10;
+
+import java.util.Scanner;
+
+
+<span class="nc" id="L7">public class MVNExe10 {</span>
+
+    public static int NumeroHarmonico(int n){
+        
+<span class="fc bfc" id="L11" title="All 2 branches covered.">        if (n &lt; 1){</span>
+<span class="fc" id="L12">            throw new IllegalArgumentException(&quot;Número fora da faixa&quot;);</span>
+        }
+        
+<span class="fc" id="L15">        int i = 2;</span>
+<span class="fc" id="L16">        int s = 1;</span>
+        
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        while (i &lt;= n){</span>
+<span class="fc" id="L19">            s = s + (1/i);</span>
+<span class="fc" id="L20">            i = i + 1;</span>
+        }
+        
+<span class="fc" id="L23">        return s;</span>
+    }
+    public static void main(String[] args) {
+       
+        int n;
+        int resultado;
+<span class="nc" id="L29">        Scanner leitor = new Scanner(System.in);</span>
+        
+<span class="nc" id="L31">        System.out.println(&quot;Insira o valor de n: &quot;);</span>
+        
+<span class="nc" id="L33">        n = Integer.parseInt(leitor.nextLine());</span>
+        
+<span class="nc" id="L35">        resultado = NumeroHarmonico(n);</span>
+        
+<span class="nc" id="L37">        System.out.println(&quot;O resultado é: &quot; + resultado);</span>
+        
+<span class="nc" id="L39">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.7.201606060606</span></div></body></html>
