@@ -7,7 +7,7 @@ public class MVNExe05 {
 
     public static boolean Propriedade153(int n){
         
-        if ((n < 0) && (n > 9999)){
+        if ((n < 0) || (n > 9999)){
             throw new IllegalArgumentException("Número fora da faixa");
         }
         
